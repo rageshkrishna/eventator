@@ -4,7 +4,7 @@ php:
 
 before_script:
     - sudo apt-get install -y libicu-dev libicu48
-    - yes '' | pecl install intl
+    - yes '' | pecl upgrade intl
     - echo "extension=intl.so" >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
     - echo '' > ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/xdebug.ini
     - cp app/config/parameters.yml.dist app/config/parameters.yml
